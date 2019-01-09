@@ -45,12 +45,20 @@ nvidia-smi
 ```
 
 A CUDA compatible version of the NVIDIA driver is installed as part of the CUDA Toolkit installation. 
-By adding the Ubuntu nvidia-drivers ppa, apt takes care of updating nvidia-drivers.
+By adding the Ubuntu nvidia-drivers ppa, apt takes care of updating nvidia-drivers, hoping that the 
+drivers version is compatible to the CUDA version. The compatibility matrix is in Table 1 at
+https://docs.nvidia.com/cuda/cuda-toolkit-release-notes/index.html.
 
 ```
 sudo add-apt-repository ppa:graphics-drivers/ppa
 sudo apt update
 sudo apt upgrade
+```
+
+To freeze the nvidia-driver to a particulat version, so
+
+```
+sudo apt-mark hold nvidia-graphics-drivers-<version>
 ```
 
 ### Reboot and check the nvidia-drivers version
