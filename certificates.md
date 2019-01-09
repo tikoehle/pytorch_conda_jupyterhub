@@ -17,6 +17,7 @@
 - **Let's Encrypt certificate**
   - __*Provides Encryption and Authentication.*__
   - Simplifies and automates the process of creation and installation of a SSL certificate.
+  - See [Let's Encrypt](https://letsencrypt.org/).
 - **Self-signed**
   - __*Provides Encryption, no Authentication.*__
   - Easy creation, *private DNS domains*, for dev and test usage only.
@@ -149,10 +150,10 @@
 - **Get a free Let's Encrypt certificate.**
   - The objective is to get the HTTPS server to automatically obtain a browser-trusted certificate, without any human intervention. 
   - This is accomplished by running a certificate management agent on the web server and the ACME protocol to interact with the Let's Encrypt service.
-  - See https://letsencrypt.org/how-it-works/
+  - See [Let's Encrypt, how it works](https://letsencrypt.org/how-it-works/).
   - Can use them for any server that uses a domain name, like web servers, mail servers, FTP servers, and many more.
   - Need a client bot to handle the ad-hoc generation and installation of the SSL certificate via ACME protocol.
-  - Let's Encrypt recommends the Certbot client https://certbot.eff.org/
+  - Let's Encrypt recommends the Certbot client at [Certbot.org](https://certbot.eff.org/).
   - Large number of other ACME clients available
 
 
@@ -164,5 +165,5 @@
     - Let's Encrypt Wildcard Certificates since March 13, 2018
   - Extended validation certificate (EV) or Organization Validation (OV)
     - Let's Encrypt only domain-validated certificates (DV)
-  - https://letsencrypt.org/upcoming-features/
+  - See [Let's Encrypt, upcoming features](https://letsencrypt.org/upcoming-features/).
   
