@@ -1,21 +1,24 @@
 ## Certificates Intro
-- Certificate utilizes public and private key (public-key cryptography).
-- Encrypting uses pub key / decrypting uses priv key.
-- Common use-case: encrypting application traffic using Secure Socket Layer (SSL) or Transport Layer Security (TLS).
-- Example: Apache HTTPS (HTTP over SSL)
+- Certificate utilizes **public and private key** (public-key cryptography).
+- Encrypting uses public key / decrypting uses private key.
 - Certificate is a method to distribute the pub key + other information about the server and the owning organization.
+- **Common use-case:** encrypting application traffic using Secure Socket Layer (SSL) or Transport Layer Security (TLS).
+- **Example:** Apache HTTPS (HTTP over SSL)
 
 ## Certificate Types
 - **Digitally signed by a Certificate Authority (CA), a trusted third party organization.**
-  - *Provides Encryption and Authentication.*
+  - __*Provides Encryption and Authentication.*__
   - Public CA can only issue certificates for *valid public domain names*.
   - CA issues a signed certificate.
   - CA guaranteeing the identity of the organizations web server (DNS resolved server FQDN or wild-card server name. 
     - Example: “comp9.home.org” vs. “*.home.org”).
   - Everyone can download and import CA certificates (browser certificate store vs. system certificate database).
   - Browsers recognize the CA certificate and HTTPS encrypt the connection without prompting the user.
+- **Let's Encrypt certificate**
+  - __*Provides Encryption and Authentication.*__
+  - Simplifies and automates the process of creation and installation of a SSL certificate.
 - **Self-signed**
-  - *Provides Encryption, no Authentication.*
+  - __*Provides Encryption, no Authentication.*__
   - Easy creation, *private DNS domains*, for dev and test usage only.
   - Anyone can claim identity if he gets the .key and .crt.
   - Browser does not recognize it, must be imported into system cert db.
