@@ -3,12 +3,12 @@ Building a JupyterHub Server.
 
 ## Hardware
 * Housing: be quiet! - Pure Base 600
-* CPU: Intel Core i3-8100 | 4x 3.60 GHz, 6MB L3-Cache
+* CPU: Intel Core i3-8100, 4 x 3.60 GHz, 6MB L3-Cache
 * GPU: NVIDIA GEFORCE RTX 2080
-* Mainboard: MSI Z390-A Pro | Intel Z390
-* RAM: 32GB DDR4-2400 | 2x 16GB
+* Mainboard: MSI Z390-A Pro, Intel Z390
+* RAM: 32GB DDR4-2400, 2 x 16GB
 * SSD (M.2 / PCIe): 1TB Samsung 970 EVO
-* Power: 850W - Corsair HXi Platinum Series | digital
+* Power: 850W - Corsair HXi Platinum Series, digital
 * CPU-Cooler: be quiet! Dark Rock Pro 4 
 
 
