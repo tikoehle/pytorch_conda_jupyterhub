@@ -66,3 +66,16 @@ sudo apt-mark hold nvidia-graphics-drivers-<version>
 ```
 nvidia-smi
 ```
+
+## Notes
+After the installation (of ?) a new service exists:
+
+```
+systemctl status nvidia-persistenced
+```
+See https://download.nvidia.com/XFree86/Linux-x86/384.59/README/nvidia-persistenced.html
+
+## References
+https://docs.nvidia.com/cuda/cuda-installation-guide-linux/index.html
+https://developer.nvidia.com/cuda-downloads
+https://docs.nvidia.com/cuda/cuda-toolkit-release-notes/index.html
