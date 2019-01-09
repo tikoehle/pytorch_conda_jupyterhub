@@ -34,8 +34,8 @@ conda update --all          # update all packages in the env
 
 ## Install PyTorch Conda package for CUDA 10
 Determine the right conda install command for pytorch at [PyTorch](https://pytorch.org/).
-For PyTorch_stable/Linux/Conda/Python3.6/CUDA10.0 the conda install command is:
-(in the activated pytorch venv!)
+For PyTorch_stable/Linux/Conda/Python3.6/CUDA10.0 the conda install command is
+**(in the activated pytorch venv)**:
 
 ```
 conda install pytorch torchvision cuda100 -c pytorch
