@@ -6,7 +6,8 @@
 - Certificate is a method to distribute the pub key + other information about the server and the owning organization.
 
 ## Certificate Types
-- **Digitally signed by a Certification Authority (CA), a trusted third party organization.**
+- **Digitally signed by a Certificate Authority (CA), a trusted third party organization.**
+  - *Provides Encryption and Authentication.*
   - Public CA can only issue certificates for *valid public domain names*.
   - CA issues a signed certificate.
   - CA guaranteeing the identity of the organizations web server (DNS resolved server FQDN or wild-card server name. 
@@ -14,8 +15,9 @@
   - Everyone can download and import CA certificates (browser certificate store vs. system certificate database).
   - Browsers recognize the CA certificate and HTTPS encrypt the connection without prompting the user.
 - **Self-signed**
-  - Easy creation, *private DNS domains*, for test usage only.
-  - Anyone can claim identity.
+  - *Provides Encryption, no Authentication.*
+  - Easy creation, *private DNS domains*, for dev and test usage only.
+  - Anyone can claim identity if he gets the .key and .crt.
   - Browser does not recognize it, must be imported into system cert db.
 
 ## Self-signed Steps
@@ -27,6 +29,7 @@
 4. **Copy the certificate .crt to a safe place on the server.**
 5. **Configure the server with the new .key and .crt.**
 6. **Get the self-signed cert trusted by Google Chrome or any other browser.**
+   * To get rid of the browser security warning because there is no authentication.
 
 ## Self-signed (Ubuntu 18.04, Google Chrome >= Version 70.0)
 1. **Create a private FQDN for the server**
@@ -95,6 +98,7 @@
    ```
    
 6. **Get the self-signed cert trusted by Google Chrome**
+   * To get rid of the browser security warning because there is no authentication.
    * Connect to the hub with https.
    
    ```
@@ -132,3 +136,30 @@
    certutil -D -d sql:$HOME/.pki/nssdb -n -<certificate>
    ```
    
+## How to obtain a CA Certificate
+- **Buy one from a third-party provider (such as VeriSign, Thawte, or others).**
+  - Traditional CA-issued certificates process.
+  - First generate a private key and create a Certificate Signing Request (CSR) for your domain. 
+  - The provider uses the CSR to generate the certificate and sends it to you. 
+  - Install your certificate for your server site process. Follow the installation instructions from the provider.
+  
+- **Get a free Let's Encrypt certificate.**
+  - The objective is to get the HTTPS server to automatically obtain a browser-trusted certificate, without any human intervention. 
+  - This is accomplished by running a certificate management agent on the web server and the ACME protocol to interact with the Let's Encrypt service.
+  - See https://letsencrypt.org/how-it-works/
+  - Can use them for any server that uses a domain name, like web servers, mail servers, FTP servers, and many more.
+  - Need a client bot to handle the ad-hoc generation and installation of the SSL certificate via ACME protocol.
+  - Let's Encrypt recommends the Certbot client https://certbot.eff.org/
+  - Large number of other ACME clients available
+
+
+## Differences between Let's Encrypt and traditional CA certificates
+- Let's Encrypt certificates provide basic SSL encryption but lack some established CA features
+  - Validity > 90 days
+    - Let's Encrypt recommends automatically renewing certificates every 60 days (because 30 days cached)
+  - Wildcard or multi-domain certificates
+    - Let's Encrypt Wildcard Certificates since March 13, 2018
+  - Extended validation certificate (EV) or Organization Validation (OV)
+    - Let's Encrypt only domain-validated certificates (DV)
+  - https://letsencrypt.org/upcoming-features/
+  
