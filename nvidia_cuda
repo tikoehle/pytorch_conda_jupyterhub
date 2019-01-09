@@ -1,0 +1,60 @@
+## Installing the NVIDIA CUDA toolkit on Ubuntu 18.04
+
+### Check if the new NVIDIA GPU really exists
+
+```
+lspci | grep -i nvidia
+```
+
+### Install Linux headers
+```
+sudo apt-get install linux-headers-$(uname -r)
+```
+
+### Download and install the cuda driver .deb package
+https://developer.nvidia.com/cuda-downloads?target_os=Linux&target_arch=x86_64&target_distro=Ubuntu&target_version=1804&target_type=deblocal
+
+```
+cd Downloads/
+sudo dpkg -i cuda-repo-ubuntu1804-10-0-local-10.0.130-410.48_1.0-1_amd64.deb 
+sudo apt-key add /var/cuda-repo-10-0-local-10.0.130-410.48/7fa2af80.pub
+sudo dpkg -i cuda-repo-ubuntu1804-10-0-local-10.0.130-410.48_1.0-1_amd64.deb 
+sudo apt update
+sudo apt install cuda
+```
+
+### Update the $PATH for nvidia tools
+
+```
+tee -a $HOME/.bashrc >/dev/null <<EOF
+
+# NVIDIA CUDA Tools PATH
+export PATH=/usr/local/cuda/bin${PATH:+:${PATH}}
+
+EOF
+
+source .bashrc
+```
+
+### Verify the CUDA installation
+
+```
+cat /proc/driver/nvidia/version
+nvcc --version
+nvidia-smi
+```
+
+A CUDA compatible version of the NVIDIA driver is installed as part of the CUDA Toolkit installation. 
+By adding the Ubuntu nvidia-drivers ppa, apt takes care of updating nvidia-drivers.
+
+```
+sudo add-apt-repository ppa:graphics-drivers/ppa
+sudo apt update
+sudo apt upgrade
+```
+
+### Reboot and check the nvidia-drivers version
+
+```
+nvidia-smi
+```
