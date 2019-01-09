@@ -30,7 +30,7 @@ c.Authenticator.admin_users = {'user'}
 **Note: using `JupyterHub.bind_url` and setting port `443` did not work for me with JupyterHub 0.9.4.**
 
 ```
-c.JupyterHub.bind_url = 'http://192.168.2.26:443'    # Keep the default port binding! This line throws an exception!
+c.JupyterHub.bind_url = 'http://<ip_addr>:443'  # Keep the default port binding! This line throws an exception!
 ```
 
 ## jupyterlab-hub
