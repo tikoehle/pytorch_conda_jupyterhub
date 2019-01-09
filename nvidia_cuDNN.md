@@ -57,9 +57,9 @@ To fix this, do:
 
 ```
 /usr/local/cuda/lib64$ sudo rm libcudnn.so
-/usr/local/cuda/lib64$ sudo rm libcudnn.so.5
-/usr/local/cuda/lib64$ sudo ln libcudnn.so.5.1.5 libcudnn.so.5
-/usr/local/cuda/lib64$ sudo ln libcudnn.so.5 libcudnn.so
+/usr/local/cuda/lib64$ sudo rm libcudnn.so.7
+/usr/local/cuda/lib64$ sudo ln libcudnn.so.7.4.2 libcudnn.so.7
+/usr/local/cuda/lib64$ sudo ln libcudnn.so.7 libcudnn.so
 ```
 
 Run `sudo ldconfig` again and there should be no errors.
