@@ -1,7 +1,8 @@
 # Up and running with JupyterHub 0.9.4 and Jupyter-LabHub
 ## JupyterHub 0.9.4
-I am running it as a single user hub.
-- Installing JupyterHub in the pytorch venv
+I am running it as a single user hub on my NVIDIA GEFORCE RTX 2080 server.
+
+### Installing JupyterHub in the pytorch venv
 
 ```
 conda activate pytorch
@@ -11,13 +12,13 @@ conda install jupyterhub
 I am also using a self-signed certificate to encrypt the conection between my browser and the JupyterHub machine.
 See [how to create and use a self-signed certificate with JupyterHub.](https://tikoehle.github.io/pytorch_conda_jupyterhub/certificates).
 
-- Generate permanent JupyterHub config file
+### Generate permanent JupyterHub config file
 
 ```
 jupyterhub --generate-config
 ```
 
-- Configure the location of the self-signed certificate (priv .key and pub .crt)
+### Configure the location of the self-signed certificate (priv .key and pub .crt)
 
 ```
 In jupyterhub_config.py:
@@ -35,7 +36,7 @@ c.JupyterHub.bind_url = 'http://192.168.2.26:443'    # Keep the default port bin
 ## jupyterlab-hub
 Serve jupyterlab-hub (jupyterlab is the new jupyter notebook). This works out of the box with jupyterhub 0.9.4.
 
-- Configure JupyterHub's Spawner to start `jupyter-labhub`
+### Configure JupyterHub's Spawner to start `jupyter-labhub`
 
 ```
 In jupyterhub_config.py:
@@ -59,7 +60,7 @@ https://<jupyterlab-hub>:8000
 
 ## Some additional knobs
 
-- Disable excessive logging
+### Disable excessive logging
 
 ```
 In jupyterhub_config.py:
