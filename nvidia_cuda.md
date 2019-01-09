@@ -12,7 +12,10 @@ sudo apt-get install linux-headers-$(uname -r)
 ```
 
 ### Download and install the cuda driver .deb package
+
+```
 https://developer.nvidia.com/cuda-downloads?target_os=Linux&target_arch=x86_64&target_distro=Ubuntu&target_version=1804&target_type=deblocal
+```
 
 ```
 cd Downloads/
@@ -85,7 +88,7 @@ https://docs.nvidia.com/cuda/cuda-toolkit-release-notes/index.html
 Because the machine is also used as a Minecraft and Steam gaming platform, here are some notes about the graphics 
 performance with nvidia-drivers 410.78 (Dec 2018) and NVIDIA GEFORCE RTX 2080.
 
-1. KDE-Neon (kwin)
+### 1. KDE-Neon (kwin) Plasma on Ubuntu 18.04
 
 ```
 $ nvidia-smi
@@ -129,14 +132,13 @@ NOTE: Disable the above setting for Gnome3!
 Display Monitor -> Compositor -> Outputmodul: OpenGL 3.1
 ```
 
-### Results
+#### Results
 The CPU utilization decreased a bit but still too high.
 The latest beta driver also improved things. There’s been some work done on kwin and the entire kde framework 
 to make it more efficient.
-See this thread: https://forum.manjaro.org/t/plasma-kwin-nvidia-faster-huh/65547
-Reported with nvidia 410.73.
+See this thread: https://forum.manjaro.org/t/plasma-kwin-nvidia-faster-huh/65547 (reported with nvidia 410.73).
 
-2. Gnome3
+### 2. Gnome3
 
 The gaming experience is almost perfect. Minecraft performs around 1000fps. 
 Steam/Raft performance is now also as expected.
