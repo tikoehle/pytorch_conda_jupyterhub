@@ -3,7 +3,8 @@
 The NVIDIA CUDA® Deep Neural Network library (cuDNN) is a GPU-accelerated library of primitives for deep neural networks.
 
 Determine the compatible cuDNN version to install at https://docs.nvidia.com/deeplearning/sdk/cudnn-install/index.html#install-linux.
-I am going to install cuDNN v7.4.2 (Dec 14, 2018), for CUDA 10.0.
+
+**I am going to install cuDNN v7.4.2 (Dec 14, 2018), for CUDA 10.0.**
 
 ### Downloading cuDNN Libs
 
