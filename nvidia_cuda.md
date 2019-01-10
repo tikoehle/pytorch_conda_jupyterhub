@@ -46,7 +46,7 @@ source .bashrc
 A CUDA compatible version of the NVIDIA driver is installed as part of the CUDA Toolkit installation. 
 By adding the Ubuntu nvidia-drivers ppa, apt takes care of updating nvidia-drivers, hoping that the 
 drivers version is compatible to the CUDA version. The compatibility matrix is in table 1 of [1].
-The compatibility matrix of Linux distribution and kernle, gcc, glibc is in table 1 of [2].
+The compatibility matrix of Linux distribution and kernel, gcc, glibc is in table 1 of [2].
 
 ```
 sudo add-apt-repository ppa:graphics-drivers/ppa
@@ -67,12 +67,12 @@ nvidia-smi
 ```
 
 ### Notes
-After the installation of CUDA a new service exists provided by NVIDIA.
+After the CUDA .deb installation a new service exists.
 
 ```
 systemctl status nvidia-persistenced
 ```
-See http://docs.nvidia.com/deploy/driver-persistence/index.html#persistence-daemon
+Details, read http://docs.nvidia.com/deploy/driver-persistence/index.html#persistence-daemon
 
 ### Verify the CUDA installation
 #### Versions
@@ -110,9 +110,12 @@ Thu Jan 10 09:44:00 2019
 
 #### Running the Binaries
 The CUDA .deb includes sample programs in source and statically linked form.
+
 The sources are here: `/usr/local/cuda-10.0/samples/`.
+
 The binaries are here: `/usr/local/cuda-10.0/extras/demo_suite/`.
-Running `deviceQuery` shows if everything works correctly.
+
+Running `deviceQuery` shows if everything works.
 
 ```
 $ ./deviceQuery 
@@ -162,7 +165,7 @@ deviceQuery, CUDA Driver = CUDART, CUDA Driver Version = 10.0, CUDA Runtime Vers
 Result = PASS
 ```
 
-## Performance of KDE-Neon vs. Gnome3
+## Desktop Performance of KDE-Neon vs. Gnome3
 
 Because the machine is also used as a Minecraft and Steam gaming platform, here are some notes about the graphics 
 performance with nvidia-drivers 410.78 (Dec 2018) and NVIDIA GEFORCE RTX 2080.
