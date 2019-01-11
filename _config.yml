@@ -27,3 +27,5 @@ analytics:
     tracking_id: "UA-132315884-1"
     
 remote_theme: mmistakes/minimal-mistakes
+minimal_mistakes_skin: "air"
+timezone: Europe/Berlin
