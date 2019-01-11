@@ -4,11 +4,7 @@ repository: "tikoehle/pytorch_conda_jupyterhub"
 
 plugins:
   - jekyll-seo-tag
-  - jekyll-paginate
-  - jekyll-sitemap
-  - jekyll-gist
   - jekyll-feed
-  - jemoji
   - jekyll-include-cache
 
 defaults:
@@ -27,5 +23,3 @@ analytics:
     tracking_id: "UA-132315884-1"
     
 remote_theme: mmistakes/minimal-mistakes
-minimal_mistakes_skin: "air"
-timezone: Europe/Berlin
