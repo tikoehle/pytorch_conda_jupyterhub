@@ -11,13 +11,13 @@ plugins:
   - jemoji
   - jekyll-include-cache
 
- defaults:
-   # _posts
-   - scope:
-       path: ""
-       type: posts
-     values:
-       read_time: true
+defaults:
+  # _posts
+  - scope:
+      path: ""
+      type: posts
+    values:
+      read_time: true
 
 google_site_verification: "e-T36HnFFsA-MDujmdqlGFbiGqnZovigWbubctBfoTE"
 
