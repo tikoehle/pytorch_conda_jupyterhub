@@ -1,5 +1,5 @@
-title: "Building a JupyterLab / JupyterHub Server"
-description: "Building a JupyterLab on JupyterHub 0.9.4 Server for Anaconda3, PyTorch 1.0 on NVIDIA cuDNN 7.4"
+title: "Building a JupyterHub Server"
+description: "Building a JupyterLab on JupyterHub 0.9.4 Server for Anaconda3, PyTorch 1.0 on NVIDIA cuDNN 7.4."
 repository: "tikoehle/pytorch_conda_jupyterhub"
 
 plugins:
