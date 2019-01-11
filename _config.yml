@@ -1,1 +1,15 @@
+title: pytorch_conda_jupyterhub
+description: Building a JupyterLab on JupyterHub 0.9.4 Server for Anaconda3, PyTorch 1.0 on NVIDIA cuDNN 7.4 
+plugins:
+  - jekyll-seo-tag
+
+defaults:
+  - scope:
+      path: ""
+      type: posts
+    values:
+      read_time: true
+
+google-site-verification: e-T36HnFFsA-MDujmdqlGFbiGqnZovigWbubctBfoTE
+google_analytics: UA-132315884-1
 theme: jekyll-theme-cayman
