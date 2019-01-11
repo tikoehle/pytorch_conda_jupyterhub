@@ -1,6 +1,6 @@
-title: Building a JupyterHub Server
-description: Building a JupyterLab on JupyterHub 0.9.4 Server for Anaconda3, PyTorch 1.0 on NVIDIA cuDNN 7.4.
-repository: tikoehle/pytorch_conda_jupyterhub
+title: "Building a JupyterHub Server"
+description: "Building a JupyterLab on JupyterHub 0.9.4 Server for Anaconda3, PyTorch 1.0 on NVIDIA cuDNN 7.4."
+repository: "tikoehle/pytorch_conda_jupyterhub"
 
 plugins:
   - jekyll-seo-tag
@@ -19,13 +19,13 @@ plugins:
      values:
        read_time: true
 
-google_site_verification: e-T36HnFFsA-MDujmdqlGFbiGqnZovigWbubctBfoTE
+google_site_verification: "e-T36HnFFsA-MDujmdqlGFbiGqnZovigWbubctBfoTE"
 analytics:
   provider: "google-gtag"
   google:
     tracking_id: "UA-132315884-1"
     anonymize_ip: false # default
 
-remote_theme: mmistakes/minimal-mistakes
+remote_theme: "mmistakes/minimal-mistakes"
 minimal_mistakes_skin: "air"
-timezone: Europe/Berlin
+timezone: "Europe/Berlin"
