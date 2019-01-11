@@ -12,4 +12,5 @@ defaults:
 
 google-site-verification: e-T36HnFFsA-MDujmdqlGFbiGqnZovigWbubctBfoTE
 google_analytics: UA-132315884-1
-theme: jekyll-theme-cayman
+#theme: jekyll-theme-cayman
+remote_theme: mmistakes/minimal-mistakes
