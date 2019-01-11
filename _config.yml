@@ -20,12 +20,10 @@ plugins:
        read_time: true
 
 google_site_verification: "e-T36HnFFsA-MDujmdqlGFbiGqnZovigWbubctBfoTE"
+
 analytics:
   provider: "google-gtag"
   google:
     tracking_id: "UA-132315884-1"
-    anonymize_ip: false # default
-
-remote_theme: "mmistakes/minimal-mistakes"
-minimal_mistakes_skin: "air"
-timezone: "Europe/Berlin"
+    
+remote_theme: mmistakes/minimal-mistakes
