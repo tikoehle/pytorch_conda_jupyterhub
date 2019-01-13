@@ -1,9 +1,9 @@
-title: Building a JupyterHub Server
-description: Building a JupyterLab on JupyterHub 0.9.4 Server for Anaconda3, PyTorch 1.0 on NVIDIA cuDNN 7.4.
+title: Building a JupyterHub Server PyTorch 1.0 Deep Learning Environment
+description: In-depth tutorial building a JupyterHub spawning JupyterLab Anaconda3 Python environment on Ubuntu 18.04 for Machine Learning and Deep Learning on PyTorch 1.0, CUDA 10.0, cuDNN 7.4. Using a self-signed certificate on JupyterHub and Google Chrome.
 
 plugins:
   - jekyll-seo-tag
 
-google-site-verification: e-T36HnFFsA-MDujmdqlGFbiGqnZovigWbubctBfoTE
+google_site_verification: e-T36HnFFsA-MDujmdqlGFbiGqnZovigWbubctBfoTE
 google_analytics: UA-132315884-1
 theme: jekyll-theme-cayman
