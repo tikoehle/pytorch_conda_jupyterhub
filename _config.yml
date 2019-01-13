@@ -3,7 +3,8 @@ description: In-depth tutorial building a JupyterHub spawning JupyterLab Anacond
 
 plugins:
   - jekyll-seo-tag
-
+  - jekyll-sitemap
+  
 google_site_verification: e-T36HnFFsA-MDujmdqlGFbiGqnZovigWbubctBfoTE
 google_analytics: UA-132315884-1
 theme: jekyll-theme-cayman
