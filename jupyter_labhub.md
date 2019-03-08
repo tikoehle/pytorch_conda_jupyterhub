@@ -97,12 +97,12 @@ In order to install JupyterLab extensions, you need to have Node.js installed.
 conda install -c conda-forge nodejs
 ```
 
-JupyterLab extensions can be installed manually using ```jupyter labextension ...``` commands, or, move convenially, 
+JupyterLab extensions can be installed manually using ```jupyter labextension ...``` commands, or, more convenially, 
 using the JupyterLab 'Extension Manager'. The 'Extension Manager' extension (github/jupyterlab_discovery) is 
 included in the core of JupyterLab but is disabled by default. To enable it:
-- Go into advanced settings editor.
+- Go into Settings -> Advanced Settings Editor.
 - Open the Extension Manager section.
-- Add the entry "enabled": true.
+- Under 'User Overrides', add the entry ```{"enabled": true}```.
 - Save the settings and reload the page.
 
 To search/browse/install any extensions, click on the 'Extension Manager' icon located in the left hand menue 
