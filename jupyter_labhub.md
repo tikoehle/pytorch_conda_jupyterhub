@@ -90,7 +90,7 @@ c.Authenticator.admin_users = {'user'}
 c.PAMAuthenticator.open_sessions = False            # Dont issue a motd when opening .ipynb
 ```
 
-### JupyterLab Extensions
+## JupyterLab Extensions
 In order to install JupyterLab extensions, you need to have Node.js installed.
 
 ```
