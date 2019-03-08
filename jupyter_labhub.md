@@ -89,3 +89,21 @@ c.Spawner.debug = False
 c.Authenticator.admin_users = {'user'}
 c.PAMAuthenticator.open_sessions = False            # Dont issue a motd when opening .ipynb
 ```
+
+### JupyterLab Extensions
+In order to install JupyterLab extensions, you need to have Node.js installed.
+
+```
+conda install -c conda-forge nodejs
+```
+
+JupyterLab extensions can be installed manually using ```jupyter labextension ...``` commands, or, move convenially, 
+using the JupyterLab 'Extension Manager'. The 'Extension Manager' extension (github/jupyterlab_discovery) is 
+included in the core of JupyterLab but is disabled by default. To enable it:
+- Go into advanced settings editor.
+- Open the Extension Manager section.
+- Add the entry "enabled": true.
+- Save the settings and reload the page.
+
+To search/browse/install any extensions, click on the 'Extension Manager' icon located in the left hand menue 
+icon panel.
