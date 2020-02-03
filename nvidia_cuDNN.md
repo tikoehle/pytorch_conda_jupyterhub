@@ -43,7 +43,7 @@ $ sudo ldconfig
 /sbin/ldconfig.real: /usr/local/cuda-10.0/targets/x86_64-linux/lib/libcudnn.so.7 ist kein symbolischer Link
 ```
 
-This is because libcudnn.so and libcudnn.so.5 are not symlinks.
+This is because libcudnn.so.7 is not a symlink.
 
 ```
 /usr/local/cuda/lib64$ ls -lha libcudnn*
@@ -56,10 +56,13 @@ This is because libcudnn.so and libcudnn.so.5 are not symlinks.
 To fix this, do:
 
 ```
-/usr/local/cuda/lib64$ sudo rm libcudnn.so
-/usr/local/cuda/lib64$ sudo rm libcudnn.so.7
-/usr/local/cuda/lib64$ sudo ln libcudnn.so.7.4.2 libcudnn.so.7
-/usr/local/cuda/lib64$ sudo ln libcudnn.so.7 libcudnn.so
+sudo ln -sf /usr/local/cuda/lib64/libcudnn.so.7.4.2 /usr/local/cuda/lib64/libcudnn.so.7
 ```
 
-Run `sudo ldconfig` again and there should be no errors.
+To verify if if it works, execute the following command and check if the loader gets the new symlink.
+```
+/usr/local/cuda/lib64$ sudo ldconfig -v | grep libcudnn
+:::
+        libcudnn.so.7 -> libcudnn.so.7.4.2
+:::
+```
